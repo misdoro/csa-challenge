@@ -9,10 +9,8 @@ end
 
 def consume_answer(io)
   line = io.gets.strip
-  if line != "NO_SOLUTION"
-    while !line.empty?
-      line = io.gets.strip
-    end
+  while !line.empty?
+    line = io.gets.strip
   end
 end
 
