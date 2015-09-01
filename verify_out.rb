@@ -9,8 +9,6 @@ end
 
 def consume_answer(io, target)
   line = io.gets.strip
-  target.write(line)
-  target.write("\n")
   while !line.empty?
     target.write(line)
     target.write("\n")
