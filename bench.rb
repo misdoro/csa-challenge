@@ -19,16 +19,16 @@ end
 
 puts "Loading top stations"
 top_stations = File.open("stations").map { |id| id.to_i }
-puts "… done\n\n"
+puts "... done\n\n"
 
 puts "Starting the application"
 io = IO.popen ARGV[0], "r+"
-puts "… done\n\n"
+puts "... done\n\n"
 
 puts "Loading the data"
 Zlib::GzipReader::open("bench_data_48h.gz").each { |line| io.write line }
 io.write "\n"
-puts "… done\n\n"
+puts "... done\n\n"
 
 puts "Starting the benchmark"
 count = 0
@@ -42,7 +42,7 @@ end
 
 io.write "\n"
 duration = Time.now - start_time
-puts "… done\n\n"
+puts "... done\n\n"
 puts "Total time: #{duration} seconds"
 puts "Average time per search: #{duration * 1000 / count} ms"
 
